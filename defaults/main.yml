@@ -11,7 +11,10 @@ borgmatic_hooks:
   after_backup:
   - echo "`date` - Finished backup."
 borgmatic_checks:
-  - repository
+  - name: repository
+    frequency: 4 weeks
+  - name: archives
+    frequency: 8 weeks
 borgmatic_check_last: 3
 borgmatic_store_atime: true
 borgmatic_store_ctime: true
