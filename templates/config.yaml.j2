@@ -178,5 +178,5 @@ prefix: '{hostname}-'
 # prevent potential shell injection or privilege escalation.
 {% for hook in borgmatic_hooks %}
 {{ hook }}:
-    {{ borgmatic_hooks[hook] | to_nice_yaml(indent=2) | trim | indent(8) }}
+    {{ borgmatic_hooks[hook] | to_nice_yaml | trim | indent(4) }}
 {% endfor %}
